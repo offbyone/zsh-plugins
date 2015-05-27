@@ -2,6 +2,8 @@
 if [ x$EMACS = xt ]; then
     EDITOR=emacsclient
     VISUAL=emacsclient
+    PAGER=cat
+    export PAGER
 else
     # Need OSX vs Posix here
     if [[ `os_platform` == 'osx' ]]; then
