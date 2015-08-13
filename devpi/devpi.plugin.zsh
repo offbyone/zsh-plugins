@@ -10,7 +10,7 @@ __setup_devpi() {
         return 1
     fi
 
-    if [ "$RUNNING" == "false" ]; then
+    if [[ "$_running" == "false" ]]; then
         # the container isn't running
         return 1
     fi
@@ -19,5 +19,5 @@ __setup_devpi() {
     export PIP_INDEX_URL=http://$(docker-machine ip $_docker_machine):3141/root/pypi/+simple/
 }
 
-__setup_devpi()
+__setup_devpi
 unset -f __setup_devpi
