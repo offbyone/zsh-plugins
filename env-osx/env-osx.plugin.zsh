@@ -5,7 +5,7 @@ function __osx_plugin_die() {
     exit 1
 }
 
-ITERM2_SHELL_INTEG_FILENAME="${HOME}/.iterm2_shell_integration.${SHELL}"
+ITERM2_SHELL_INTEG_FILENAME="${HOME}/.iterm2_shell_integration.zsh"
 
 install_iterm2_shell_integration() {
     which printf > /dev/null 2>&1 || __osx_plugin_die "Shell integration requires the printf binary to be in your path."
