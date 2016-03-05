@@ -5,12 +5,7 @@ __setup_devpi() {
     local _docker_machine=${DOCKER_MACHINE_NAME:-dev}
     local _devpi_container=devpi
     local _running=$(docker inspect --format="{{ .State.Running }}" $_devpi_container 2> /dev/null)
-    if [ $? -eq 1 ]; then
-        # the container doesn't exist
-        return 1
-    fi
-
-    if [[ "$_running" == "false" ]]; then
+    if [[ "$_running" != "true" ]]; then
         # the container isn't running
         return 1
     fi
