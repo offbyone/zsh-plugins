@@ -1,5 +1,5 @@
 # if we are in emacs; we do emacs-ey things
-if [ x$EMACS = xt ]; then
+if [[ ! -z $INSIDE_EMACS ]]; then
     EDITOR=emacsclient
     VISUAL=emacsclient
     PAGER=cat
