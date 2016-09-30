@@ -42,5 +42,9 @@ fi
 if ! iterm2_shell_integration_installed; then
     echo "Unable to install iterm2 shell integration"
 else
-    load_iterm2_shell_integration
+    if [ x"$TERM" = "xscreen" ]; then
+        echo "iTerm 2 shell integration is disabled in tmux"
+    else
+	load_iterm2_shell_integration
+    fi
 fi
