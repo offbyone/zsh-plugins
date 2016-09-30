@@ -12,3 +12,6 @@ for ext in $HOME/extensions/git*; do
     fi
     append_path PATH $ext
 done
+
+# There are few, if any circumstances where I won't want this in my shell.
+setopt extendedglob
